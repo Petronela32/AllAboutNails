@@ -12,8 +12,8 @@ import { FormeUnghiiComponent } from './forme-unghii/forme-unghii.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { BolileUnghieiComponent } from './bolile-unghiei/bolile-unghiei.component';
 import { ProductsComponent } from './products/products.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     BolileUnghieiComponent,
     ProductsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, NgbCarouselModule],
+  imports: [BrowserModule, AppRoutingModule, MatButtonModule],
   providers: [],
   bootstrap: [AppComponent],
 })
