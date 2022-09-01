@@ -13,7 +13,10 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { BolileUnghieiComponent } from './bolile-unghiei/bolile-unghiei.component';
 import { ProductsComponent } from './products/products.component';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,15 @@ import { MatButtonModule } from '@angular/material/button';
     BolileUnghieiComponent,
     ProductsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MatButtonModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    MatSnackBarModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
