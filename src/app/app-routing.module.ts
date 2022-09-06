@@ -4,9 +4,10 @@ import { BolileUnghieiComponent } from './bolile-unghiei/bolile-unghiei.componen
 import { DespreUnghiaNaturalaComponent } from './despre-unghia-naturala/despre-unghia-naturala.component';
 import { FormeUnghiiComponent } from './forme-unghii/forme-unghii.component';
 import { HomeComponent } from './home/home.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { ProductsComponent } from './products/products.component';
 import { UstensileFolositeComponent } from './ustensile-folosite/ustensile-folosite.component';
+import { ProductsComponent } from './products/products.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,9 +15,10 @@ const routes: Routes = [
   { path: 'bolile-unghiei', component: BolileUnghieiComponent },
   { path: 'ustensile-folosite', component: UstensileFolositeComponent },
   { path: 'forme-unghii', component: FormeUnghiiComponent },
-  { path: 'products', component: ProductsComponent},
+  { path: 'products', component: ProductsComponent },
+  { path: 'search/:name', component: SearchComponent },
+  { path: 'not-found', component: NotFoundComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({

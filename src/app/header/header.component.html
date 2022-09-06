@@ -6,7 +6,7 @@
       Despre unghia naturala
     </button>
     <button mat-button routerLink="/forme-unghii">Forme unghii</button>
-    <button mat-button routerLink="produse-unghii">Produse</button>
+    <button mat-button routerLink="products">Produse</button>
     <button mat-button routerLink="ustensile-folosite">
       Ustensile folosite
     </button>
@@ -15,7 +15,7 @@
       type="text"
       [(ngModel)]="searchValue"
       (keyup)="onSearchInput($event)"
-      placeholder="Search Product"
+      placeholder="Search"
     />
     <button
       *ngIf="searchValue"
