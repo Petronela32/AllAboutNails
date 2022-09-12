@@ -8,11 +8,28 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   searchValue: string = '';
+
   snackBar: any;
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const navBar = document.getElementById('nav-bar');
+
+    const navBarPosition = navBar.offsetTop;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > navBarPosition) {
+        navBar.classList.add('active');
+      } else {
+        navBar.classList.remove('active');
+      }
+    });
+  }
+
+  // searchChange(ev: Event): void {
+  //   this.searchValue = ev.target as HTMLInputElement).value;
+  // }
 
   searchProduct(): void {
     if (!this.searchValue) {
@@ -32,7 +49,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  clearValue():void {
+  clearValue(): void {
     this.searchValue = '';
   }
 }

@@ -1,1 +1,18 @@
-<img src="../../assets/pictures/IMG_4038.jpg" alt="4038" width="100%" />
+<div class="slide-container">
+  <div class="slides-fade">
+    <img src="../../assets/pictures/IMG_4038.jpg" alt="4038" width="100%" />
+  </div>
+  <div class="slides-fade">
+    <img src="../../assets/pictures/IMG_7591.jpg" alt="7591" width="100%" />
+  </div>
+  <div class="slides-fade">
+    <img src="../../assets/pictures/IMG_4734.jpg" alt="4734" width="100%" />
+  </div>
+  <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+  <a class="next" (click)="plusSlides(1)">&#10095;</a>
+</div>
+<div>
+  <span class="dot" (click)="currentSlide(1)"></span>
+  <span class="dot" (click)="currentSlide(2)"></span>
+  <span class="dot" (click)="currentSlide(3)"></span>
+</div>

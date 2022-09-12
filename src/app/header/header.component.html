@@ -11,21 +11,15 @@
       Ustensile folosite
     </button>
     <input
-      matInput
-      type="text"
+      id="input-search"
+      type="Search"
       [(ngModel)]="searchValue"
+     
       (keyup)="onSearchInput($event)"
       placeholder="Search"
     />
-    <button
-      *ngIf="searchValue"
-      matSuffix
-      mat-icon-button
-      aria-label="Clear"
-      (click)="clearValue()"
-      (click)="searchProduct()"
-    >
-      <mat-icon>close</mat-icon>
+    <button mat-icon-button (click)="searchProduct()">
     </button>
+    <mat-icon>search</mat-icon>
   </div>
 </div>
