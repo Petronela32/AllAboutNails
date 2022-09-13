@@ -18,6 +18,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchComponent } from './search/search.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SearchComponent } from './search/search.component';
     ProductsComponent,
     NotFoundComponent,
     SearchComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

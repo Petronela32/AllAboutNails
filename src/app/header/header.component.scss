@@ -1,21 +1,10 @@
-:host {
-  display: flex;
-  cursor: pointer;
-}
-// button {
-//   background-color: lightyellow;
+// :host {
+//   display: flex;
+//   cursor: pointer;
 // }
-.active {
-  position: fixed;
-  top: 0;
-  z-index: 999;
-}
-#nav-bar {
-  display: flex;
- justify-content: space-around;
-  width: 100%;
-  background-color: white;
-}
-button{ 
-  background-color: white;
-}
+
+// .active {
+//   position: fixed;
+//   top: 0;
+//   z-index: 999;
+// }

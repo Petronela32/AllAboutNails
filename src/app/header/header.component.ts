@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs/internal/Subscription';
 
 @Component({
   selector: 'app-header',
@@ -7,49 +8,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  searchValue: string = '';
-
-  snackBar: any;
-
+  public q: string = '';
+  public cartItems: number = 0;
+  private subscriptions: Subscription = new Subscription();
+  
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    const navBar = document.getElementById('nav-bar');
+    // const navBar = document.getElementById('nav-bar');
 
-    const navBarPosition = navBar.offsetTop;
+    // const navBarPosition = navBar.offsetTop;
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > navBarPosition) {
-        navBar.classList.add('active');
-      } else {
-        navBar.classList.remove('active');
-      }
-    });
+    // window.addEventListener('scroll', () => {
+    //   if (window.scrollY > navBarPosition) {
+    //     navBar.classList.add('active');
+    //   } else {
+    //     navBar.classList.remove('active');
+    //   }
+    // });
   }
 
-  // searchChange(ev: Event): void {
-  //   this.searchValue = ev.target as HTMLInputElement).value;
+  // search(ev: Event): void {
+  //   this.q = (event.target as HTMLElement).value;
+
+  //   this.router.navigate([], {
+  //     queryParams: {
+  //       q: this.q,
+  //     },
+  //     queryParamsHandling: 'merge',
+  //   });
   // }
 
-  searchProduct(): void {
-    if (!this.searchValue) {
-      this.showMessage();
-    } else {
-      this.router.navigate(['/search', this.searchValue]);
-    }
-  }
-
-  showMessage(): void {
-    this.snackBar.open('Enter name of product', '', { duration: 4000 });
-  }
-
-  onSearchInput(ev: KeyboardEvent): void {
-    if (ev.key === 'Enter') {
-      this.searchProduct;
-    }
-  }
-
-  clearValue(): void {
-    this.searchValue = '';
-  }
 }
