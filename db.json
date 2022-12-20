@@ -1,0 +1,16 @@
+{
+  "pila": [
+    {
+      "slim": "150/240",
+      "miez": "lemn-granulat"
+    },
+    {
+      "normala": "100/240",
+      "miez": "lemn-granulat"
+    },
+    {
+      "normala": "180/240",
+      "miez": "lemn-granulat"
+    }
+  ]
+}
