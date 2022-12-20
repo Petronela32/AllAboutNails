@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UstensileFolositeComponent } from './ustensile-folosite/ustensile-folosite.component';
 import { ProductsComponent } from './products/products.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SearchComponent } from './search/search.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'ustensile-folosite', component: UstensileFolositeComponent },
   { path: 'forme-unghii', component: FormeUnghiiComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'search/:name', component: SearchComponent },
   { path: 'not-found', component: NotFoundComponent },
+  { path: 'cart', component: CartComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
